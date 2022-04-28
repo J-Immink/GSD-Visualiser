@@ -1,0 +1,16 @@
+{
+"companyName": "ThePeopleGroup",
+"productName": "TPG_PointCloud_Web",
+"productVersion": "0.1",
+"dataUrl": "3df0bb299ca437ceb66ce5b751e3c5db.unityweb",
+"wasmCodeUrl": "17e5010406e919f1a0bce56bd2be0744.unityweb",
+"wasmFrameworkUrl": "078457fc45ee8671efd805d8118e79d1.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.34f1"
+}
