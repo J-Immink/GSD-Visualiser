@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>GeoFiber Visualiser</title>
+  <script src="Build/20986a4044eaa8551db6be07233cc1d9.js"></script>
+  <script>
+    UnityLoader.instantiate("unityContainer", "Build/08ac55085026fa0a64cf6600ee6d17ce.json", { onProgress: UnityProgress });
+
+    function UnityProgress(unityInstance, progress) {
+      var progressText = document.getElementById("progressText");
+      progressText.innerHTML = progress == 1 ? "Starting up" : `Loading ${progress * 100 | 0}%`
+    }
+
+    function OnLoaded() {
+      document.getElementById("loadingOverlay").style.visibility = 'hidden';
+    }
+  </script>
+</head>
+
+<body style="margin: 0px; padding: 0px; overflow: hidden;">
+  <div id="unityContainer" style="width:100vw; height:100vh;"></div>
+  <div id="loadingOverlay"
+    style="position:absolute; top: 0px; left: 0px; height: 100vh; width: 100vw; background-color: rgb(32, 32, 32); display: flex; justify-content: center; align-items: center;">
+    <h1 id="progressText" style="color: whitesmoke; font-size: 40pt; font-family: sans-serif;"></h1>
+  </div>
+</body>
+
+</html>
