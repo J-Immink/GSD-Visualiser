@@ -1,0 +1,15 @@
+{
+"companyName": "ThePeopleGroup",
+"productName": "TPG_GSD_Visualization",
+"productVersion": "0.1",
+"dataUrl": "27e82c164ca395c671b38d7c86b2e46e.unityweb",
+"wasmCodeUrl": "df6801957bba308bdb1b09249ff74394.unityweb",
+"wasmFrameworkUrl": "a0f1e3f6171d5475e825eef02f3fdfdd.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.34f1"
+}
