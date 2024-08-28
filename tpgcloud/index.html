@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>UnityWeb</title>
+</head>
+
+<body style="margin: 0px; padding: 0px; overflow: hidden;">
+  <canvas id="unityContainer" style="width:100vw; height:100vh;"></canvas>
+  <div id="loadingOverlay"
+    style="position:absolute; top: 0px; left: 0px; height: 100vh; width: 100vw; background-color: rgb(32, 32, 32); display: flex; justify-content: center; align-items: center;">
+    <h1 id="progressText" style="color: whitesmoke; font-size: 40pt; font-family: sans-serif;"></h1>
+  </div>
+</body>
+
+<script>
+  var buildUrl = "Build";
+  var loaderUrl = buildUrl + "/bcfb072628303d7413d681a6bbdf248d.loader.js";
+  var script = document.createElement("script");
+  script.src = loaderUrl;
+  script.onload = () => {
+    var buildUrl = "Build";
+    var canvas = document.getElementById("unityContainer")
+    var config = {
+      dataUrl: buildUrl + "/995bac8b3033619a09acae6b466a0276.data.unityweb",
+      frameworkUrl: buildUrl + "/709b1ca7dab1e50ec8843a9680b7a569.framework.js.unityweb",
+      codeUrl: buildUrl + "/749d6a6f0599796bba7a8f1047370995.wasm.unityweb",
+      companyName: "TPG",
+      productName: "TPG_Unity6Preview",
+      productVersion: "0.1",
+      streamingAssetsUrl: "StreamingAssets"
+    };
+
+    createUnityInstance(canvas, config, onProgress).catch(onError);
+    function onProgress(progress) {
+      var progressText = document.getElementById("progressText");
+      progressText.innerHTML = `Loading ${progress * 100 | 0}%`
+    }
+
+    function onError(message) {
+      console.log(message);
+    }
+  };
+
+  function onLoaded() {
+    document.getElementById("loadingOverlay").style.visibility = 'hidden';
+  }
+
+  document.body.appendChild(script); 
+</script>
+
+</html>
